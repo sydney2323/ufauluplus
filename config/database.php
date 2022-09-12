@@ -52,12 +52,12 @@ return [
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
-            'engine' => null,
+            'engine' => "InnoDB",
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
@@ -145,3 +145,54 @@ return [
     ],
 
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// APP_DEBUG
+// true
+// Edit Delete
+// APP_ENV
+// production
+// Edit Delete
+// APP_KEY
+// base64:kj2eHjC8EueR5zUqZoVyLemKEPWnDqYPcoG9YXVOvlo=
+// Edit Delete
+// APP_NAME
+// Laravel
+// Edit Delete
+// APP_URL
+// https://ufauluplus.herokuapp.com/
+// Edit Delete
+// CLEARDB_DATABASE_URL
+// mysql://b6bad7c0bf5832:93c16148@us-cdbr-east-06.cleardb.net/heroku_56e1e358a242137?reconnect=true
+// mysql://bc7a91c2ad17f7:4980350d@us-cdbr-east-06.cleardb.net/heroku_1d0df7d70b660be?reconnect=true
+// Edit Delete
+// DB_CONNECTION
+// mysql
+// Edit Delete
+// DB_DATABASE
+// heroku_56e1e358a242137
+// Edit Delete
+// DB_HOST
+// us-cdbr-east-06.cleardb.net
+// Edit Delete
+// DB_PASSWORD
+// 93c16148
+// Edit Delete
+// DB_PORT
+// 3306
+// Edit Delete
+// DB_USERNAME
+// b6bad7c0bf5832
+// Edit Delete
