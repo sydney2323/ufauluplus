@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('choice_olevels', function (Blueprint $table) {
             $table->id();
             $table->integer('questions_olevel_id');
-            $table->text('is_correct')->default(0);
+            $table->integer('is_correct')->default(0);
             $table->text('text');
             $table->timestamps();
         });
