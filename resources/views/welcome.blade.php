@@ -14,7 +14,7 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="caption">
-                <h2>Welcome to UfauluPlus+</h2>
+                <h2>Welcome to Ufaulu Plus+</h2>
                 <p>UfauluPlus+ is designed to allow every high-school student to deliver modern, curriculum-aligned courses  to their students.
 
                   Easy to join and simple to implement in the classroom, you’ll get access to interactive courses, class and student management tools and more.
@@ -102,6 +102,7 @@
             <h2>News & Events</h2>
           </div>
         </div>
+        @if (!$news->isEmpty())
         <div class="col-lg-4">
           <div class="categories">
             <h4>News</h4>
@@ -111,7 +112,9 @@
               @endforeach
             </ul>
           </div>
-        </div>
+        </div>  
+        @endif
+        
         <div class="col-lg-8">
           <div class="row">
             @foreach ($events as $event)
@@ -125,7 +128,7 @@
                 </div>
                 <div class="down-content">
                   <div class="date">
-                    <h6>Nov <span>10</span></h6>
+                    <h6>{{$event->created_at->format('M')}} <span>{{$event->created_at->format('d')}}</span></h6>
                   </div>
                   <a href="/events/{{$event->id}}"><h4>{{$event->title}}</h4></a>
                   <p>{{$event->description}}.</p>
@@ -235,7 +238,7 @@
         <div class="col-lg-6">
           <div class="row">
             <div class="col-lg-12">
-              <h2>A Few Facts About UfauluPlus+</h2>
+              <h2>A Few Facts About Ufaulu Plus+</h2>
             </div>
             <div class="col-lg-6">
               <div class="row">
@@ -247,7 +250,7 @@
                 </div>
                 <div class="col-12">
                   <div class="count-area-content">
-                    <div class="count-digit">5</div>
+                    <div class="count-digit">3</div>
                     <div class="count-title">Current Teachers</div>
                   </div>
                 </div>
@@ -334,11 +337,11 @@
             <ul>
               <li>
                 <h6>Phone Number</h6>
-                <span>255-xxx-xxx</span>
+                <span>+255 754 866 314</span>
               </li>
               <li>
                 <h6>Email Address</h6>
-                <span>info@UfauluPlus+.com</span>
+                <span>sunguraedson19<br>@gmail.com</span>
               </li>
               <li>
                 <h6>Street Address</h6>

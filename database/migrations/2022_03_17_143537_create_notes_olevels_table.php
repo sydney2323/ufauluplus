@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('subject');
             $table->string('topic');
             $table->string('slug')->unique();
-            $table->text('description');
+            $table->longText('description');
             $table->integer('status');
             $table->timestamps();
         });

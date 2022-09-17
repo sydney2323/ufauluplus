@@ -24,7 +24,7 @@
                     <span>{{$event->fee}}</span>
                   </div>
                   <div class="date">
-                    <h6>Nov <span>12</span></h6>
+                    <h6>{{$event->created_at->format('M')}} <span>{{$event->created_at->format('d')}}</span></h6>
                   </div>
                   <a href="/events/{{$event->id}}"><img src="{{ asset('images-upload/'.$event->image) }}" alt=""></a>
                 </div>

@@ -21,7 +21,7 @@
               <div class="meeting-single-item">
                 <div class="thumb">
                   <div class="date">
-                    <h6>Nov <span>12</span></h6>
+                    <h6>{{$news->created_at->format('M')}} <span>{{$news->created_at->format('d')}}</span></h6>
                   </div>
                   <a href="/news/{{$news->id}}"><img style="max-height: 500px;" src="{{ asset('images-upload/'.$news->image) }}" alt=""></a>
                 </div>
