@@ -31,11 +31,11 @@
                   <h3 class="card-title">Test your knowldge by our available O-level Quiz</h3>
                 </div> <!-- /.card-body -->
                 <div class="card-body">
-                    <p>> <a href="/client/olevel/quiz/{{"Mathematics"}}">Mathematics</a></p>
-                    <p>> <a href="/client/olevel/quiz/{{"Physics"}}">Physics</a></p>
-                    <p>> <a href="/client/olevel/quiz/{{"Chemistry"}}">Chemistry</a></p>
-                    <p>> <a href="/client/olevel/quiz/{{"Biology"}}">Biology</a></p>
-                    <p>> <a href="/client/olevel/quiz/{{"Geography"}}">Geography</a></p>
+                    <p>. <a href="/client/olevel/quiz/{{"Mathematics"}}">Mathematics</a></p>
+                    <p>. <a href="/client/olevel/quiz/{{"Physics"}}">Physics</a></p>
+                    <p>. <a href="/client/olevel/quiz/{{"Chemistry"}}">Chemistry</a></p>
+                    <p>. <a href="/client/olevel/quiz/{{"Biology"}}">Biology</a></p>
+                    <p>. <a href="/client/olevel/quiz/{{"Geography"}}">Geography</a></p>
                 </div><!-- /.card-body -->
               </div>
           </div> 
@@ -46,11 +46,11 @@
                   <h3 class="card-title">Test your knowldge by our available A-level Quiz</h3>
                 </div> <!-- /.card-body -->
                 <div class="card-body">
-                    <p>> <a href="/client/alevel/quiz/{{"Mathematics"}}">Mathematics</a></p>
-                    <p>> <a href="/client/alevel/quiz/{{"Physics"}}">Physics</a></p>
-                    <p>> <a href="/client/alevel/quiz/{{"Chemistry"}}">Chemistry</a></p>
-                    <p>> <a href="/client/alevel/quiz/{{"Biology"}}">Biology</a></p>
-                    <p>> <a href="/client/alevel/quiz/{{"Geography"}}">Geography</a></p>
+                    <p>. <a href="/client/alevel/quiz/{{"Mathematics"}}">Mathematics</a></p>
+                    <p>. <a href="/client/alevel/quiz/{{"Physics"}}">Physics</a></p>
+                    <p>. <a href="/client/alevel/quiz/{{"Chemistry"}}">Chemistry</a></p>
+                    <p>. <a href="/client/alevel/quiz/{{"Biology"}}">Biology</a></p>
+                    <p>. <a href="/client/alevel/quiz/{{"Geography"}}">Geography</a></p>
                 </div><!-- /.card-body -->
               </div>
           </div>  

@@ -8,7 +8,7 @@
           <h5 class="">Exam name: {{ $quizAlevel->name }}</h5><hr>
           <div class="d-flex">
              <a href="/admin/quiz/alevel/{{ $quizAlevel->id }}/question/create" class="btn btn-success btn-sm mr-2">Add Qn</a>
-             <a href="/admin/quiz/" class="btn btn-secondary btn-sm">Go back</a>
+             <a href="/admin-quiz-alevel" class="btn btn-secondary btn-sm">Go back</a>
           </div>
         </div>
         @foreach($quizAlevel->questionsAlevel as $question)

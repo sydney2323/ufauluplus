@@ -9,7 +9,7 @@
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h3 class="m-0">Welcome to SchooNet Tanzania</h3>
+            <h3 class="m-0">Welcome to Ufaulu Plus+ Tanzania</h3>
           </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
@@ -32,7 +32,7 @@
                 <div class="card-body clearfix">
                   <blockquote class="quote-info">
                     <p>One of the best E-learning platform in Tanzania.</p>
-                    <small><cite title="Source Title">SchoolNet Tanzania</cite></small>
+                    <small><cite title="Source Title">Ufaulu Plus+ Tanzania</cite></small>
                   </blockquote>
                 </div>
               </div>
@@ -40,7 +40,7 @@
                 <div class="card-body clearfix">
                   <blockquote class="quote-danger">
                     <p>Best Instructors that will guide you through your learning process.</p>
-                    <small><cite title="Source Title">SchoolNet Tanzania</cite></small>
+                    <small><cite title="Source Title">Ufaulu Plus+ Tanzania</cite></small>
                   </blockquote>
                 </div>
               </div>
@@ -48,7 +48,7 @@
                 <div class="card-body clearfix">
                   <blockquote class="quote-success">
                     <p>Used by students of St Joseph University during field for teaching.</p>
-                    <small><cite title="Source Title">SchoolNet Tanzania</cite></small>
+                    <small><cite title="Source Title">Ufaulu Plus+ Tanzania</cite></small>
                   </blockquote>
                 </div></div>
             </div>

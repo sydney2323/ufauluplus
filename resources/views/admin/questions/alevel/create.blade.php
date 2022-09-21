@@ -65,9 +65,10 @@
                </div>
             </div>
             <!-- /.card-body -->
-
+            
             <div class="card-footer">
               <button type="submit" class="btn btn-secondary">Submit</button>
+              <a href="/admin-quiz-alevel/{{ $quiz_id }}" class="btn btn-info">Back to Question list</a>
             </div>
           </form>
         </div>

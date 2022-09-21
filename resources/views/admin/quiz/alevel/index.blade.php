@@ -18,8 +18,8 @@
           <th>Name</th>
           <th>Description</th>
           <th>Time</th>
-          <th>Number of Qns</th>
-          <th colspan="2">Actions</th>
+          <th>Activeness</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody> 
@@ -73,9 +73,12 @@
             </select>
          </div>
          <div class="form-group">
-            <label for="title">Number of Qns:</label>
-            <input type="number" name="no_of_qn" class="form-control" id="no_of_qn" placeholder="Enter no of Qns">
-          </div>
+          <label for="Exam Activeness">Exam Activeness:</label>
+          <select class="form-control" name="active" id="active">
+            <option value="0">Not active</option>
+            <option value="1">active</option>
+          </select>
+       </div>
           <input type="submit" class="btn btn-secondary btn-sm" id="add_quiz" value="save">
         </form>
         </div>
@@ -127,9 +130,12 @@
             </select>
          </div>
          <div class="form-group">
-            <label for="title">Number of Qns:</label>
-            <input type="number" name="edit_no_of_qn" class="form-control" id="edit_no_of_qn" placeholder="Enter no of Qns">
-          </div>
+          <label for="Exam Activeness">Exam Activeness:</label>
+          <select class="form-control" name="edit_active" id="edit_active">
+            <option value="0">Not active</option>
+            <option value="1">active</option>
+          </select>
+       </div>
           <input type="submit" class="btn btn-secondary btn-sm" id="update_quiz" value="update">
         </form>
         </div>
@@ -154,16 +160,19 @@
                     console.log(response);
                     $('tbody').html("");
                     $.each(response.quizAlevel, function(key, value){
+                      if (value.active == 0) {
+                        var active = "Not active";
+                      }else{
+                        var active = "active";
+                      }
 				          	$('tbody').append('<tr>\
                     <td>'+value.subject+'</td>\
                     <td>'+value.name+'</td>\
                     <td>'+value.description+'</td>\
                     <td>'+value.time+' Min</td>\
-                    <td>'+value.no_of_qn+'</td>\
+                    <td>'+active+'</td>\
                     <td>\
-                        <a  href="/admin-quiz-alevel/'+value.id+'" class="btn btn-secondary btn-sm">Add Questions</a h>\
-                    </td>\
-                    <td>\
+                      <a  href="/admin-quiz-alevel/'+value.id+'" class="btn btn-secondary btn-sm">Add Questions</a h>\
                         <div class="d-flex">\
                         <button type="button" value="'+value.id+'" class="edit_button btn btn-info btn-sm">\
                           <i class="fas fa-pencil-alt"></i>\
@@ -199,7 +208,7 @@
                     $('#edit_name').val(response.quizAlevel.name); 
                     $('#edit_description').val(response.quizAlevel.description); 
                     $('#edit_time').val(response.quizAlevel.time); 
-                    $('#edit_no_of_qn').val(response.quizAlevel.no_of_qn);
+                    $('#edit_active').val(response.quizAlevel.active);
                     $('#quiz_id').val(response.quizAlevel.id);
                     $('#edit_quiz').modal('show');
                     
@@ -226,7 +235,7 @@
             'name':$('#edit_name').val(),
             'description':$('#edit_description').val(),
             'time':$('#edit_time').val(),
-            'no_of_qn':$('#edit_no_of_qn').val() 
+            'active':$('#edit_active').val() 
           }
                 $.ajaxSetup({
                     headers: {
@@ -309,7 +318,7 @@
             'name':$('#name').val(),
             'description':$('#description').val(),
             'time':$('#time').val(),
-            'no_of_qn':$('#no_of_qn').val() 
+            'active':$('#active').val() 
         }
 
         $.ajaxSetup({
