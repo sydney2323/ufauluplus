@@ -30,7 +30,7 @@ class QuizController extends Controller
             'name' => 'required',
             'description' => 'required',
             'time' => 'required',
-            'no_of_qn' => 'required',
+            'active' => 'required',
         ]);
 
         
@@ -84,7 +84,7 @@ class QuizController extends Controller
             'name' => 'required',
             'description' => 'required',
             'time' => 'required',
-            'no_of_qn' => 'required',
+            'active' => 'required',
         ]);
 
         

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->integer('time');
-            $table->integer('no_of_qn');
+            $table->boolean('active');
             $table->timestamps();
         });
     }

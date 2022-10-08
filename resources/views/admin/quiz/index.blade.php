@@ -18,8 +18,8 @@
           <th>Name</th>
           <th>Description</th>
           <th>Time</th>
-          <th>Number of Qns</th>
-          <th colspan="2">Actions</th>
+          <th>Activeness</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody> 
@@ -73,9 +73,12 @@
             </select>
          </div>
          <div class="form-group">
-            <label for="title">Number of Qns:</label>
-            <input type="number" name="no_of_qn" class="form-control" id="no_of_qn" placeholder="Enter no of Qns">
-          </div>
+          <label for="Exam Activeness">Exam Activeness:</label>
+          <select class="form-control" name="active" id="active">
+            <option value="0">Not active</option>
+            <option value="1">active</option>
+          </select>
+       </div>
           <input type="submit" class="btn btn-secondary btn-sm" id="add_quiz" value="save">
         </form>
         </div>
@@ -127,9 +130,12 @@
             </select>
          </div>
          <div class="form-group">
-            <label for="title">Number of Qns:</label>
-            <input type="number" name="edit_no_of_qn" class="form-control" id="edit_no_of_qn" placeholder="Enter no of Qns">
-          </div>
+          <label for="Exam Activeness">Exam Activeness:</label>
+          <select class="form-control" name="active" id="active">
+            <option value="0">Not active</option>
+            <option value="1">active</option>
+          </select>
+       </div>
           <input type="submit" class="btn btn-secondary btn-sm" id="update_quiz" value="update">
         </form>
         </div>
@@ -148,17 +154,23 @@
 
             $.ajax({
             type : "GET",
-			url : '/admin/quiz/fetch',
+			      url : '/admin/quiz/fetch',
             dataType : "json",
-			success : function(response){
+            success : function(response){
+              console.log(response);
                 $('tbody').html("");
                 $.each(response.quizOlevel, function(key, value){
-					$('tbody').append('<tr>\
+                  if (value.active == 0) {
+                        var active = "Not active";
+                      }else{
+                        var active = "active";
+                      }
+					         $('tbody').append('<tr>\
                     <td>'+value.subject+'</td>\
                     <td>'+value.name+'</td>\
                     <td>'+value.description+'</td>\
                     <td>'+value.time+' Min</td>\
-                    <td>'+value.no_of_qn+'</td>\
+                    <td>'+active+'</td>\
                     <td>\
                         <a  href="/admin/quiz/'+value.id+'" class="btn btn-secondary btn-sm">Add Questions</a h>\
                     </td>\
@@ -198,7 +210,7 @@
                     $('#edit_name').val(response.quizOlevel.name); 
                     $('#edit_description').val(response.quizOlevel.description); 
                     $('#edit_time').val(response.quizOlevel.time); 
-                    $('#edit_no_of_qn').val(response.quizOlevel.no_of_qn);
+                    $('#edit_active').val(response.quizOlevel.active);
                     $('#quiz_id').val(response.quizOlevel.id);
                     
                 } else if(response.status == 404) {
@@ -224,7 +236,7 @@
             'name':$('#edit_name').val(),
             'description':$('#edit_description').val(),
             'time':$('#edit_time').val(),
-            'no_of_qn':$('#edit_no_of_qn').val() 
+            'active':$('#edit_active').val() 
           }
                 $.ajaxSetup({
                     headers: {
@@ -307,7 +319,7 @@
             'name':$('#name').val(),
             'description':$('#description').val(),
             'time':$('#time').val(),
-            'no_of_qn':$('#no_of_qn').val() 
+            'active':$('#active').val() 
         }
 
         $.ajaxSetup({
@@ -345,14 +357,14 @@
         name: {required: true},
         description: {required: true},
         time: {required: true},
-        no_of_qn: {required: true}
+        active: {required: true}
     },
     messages: {
       subject: {required: "Please select a subject"},
       name: {required: "Please enter a name"},
       description: {required: "Please enter a description"},
       time: {required: "Please enter a time"},
-      no_of_qn: {required: "Please enter a number of qns"},
+      active: {required: "Please enter a active"},
     },
     errorElement: 'span',
     errorPlacement: function (error, element) {

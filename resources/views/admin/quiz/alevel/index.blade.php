@@ -356,14 +356,14 @@
         name: {required: true},
         description: {required: true},
         time: {required: true},
-        no_of_qn: {required: true}
+        active: {required: true}
     },
     messages: {
       subject: {required: "Please select a subject"},
       name: {required: "Please enter a name"},
       description: {required: "Please enter a description"},
       time: {required: "Please enter a time"},
-      no_of_qn: {required: "Please enter a number of qns"},
+      active: {required: "Please enter a active qns"},
     },
     errorElement: 'span',
     errorPlacement: function (error, element) {
