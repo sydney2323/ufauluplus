@@ -19,12 +19,6 @@ class AdminUserFeedbackController extends Controller
 
     public function fetchUserFeedbackAll(Request $request)
     {
-        // UserFeedback::update([
-        //     'id' => 0
-        // ],
-        // [
-        //     'id' => Session::get('admin')->id
-        // ]);
         $userFeedbacks = UserFeedback::orderBy('id','desc')->paginate(5);
         return view('admin.feedback',compact('userFeedbacks'));
     }

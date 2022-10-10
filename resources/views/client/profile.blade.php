@@ -12,7 +12,7 @@
       </div>
       <div class="widget-user-image">
         @if (Session::get('user')->image == null)
-        <img class="img-circle elevation-2" src="../dist/img/avatar4.png" alt="">
+        <img class="img-circle elevation-2" src="../dist/img/j5.png" alt="">
         @else
         <img class="img-circle elevation-2" src="../dist/img/user1-128x128.jpg" alt="">    
         @endif

@@ -10,21 +10,21 @@ class UserNotesAlevelController extends Controller
     public function show($subject)
     {
         $subjectTitle = $subject;
-        $subjects = NotesAlevel::where('subject',$subject)->get();
+        $subjects = NotesAlevel::where('subject',$subject)->where('status',1)->get();
         
         return view('client.notes',compact('subjectTitle','subjects'));
     }
     
     public function showSpecificTopic($subject,$topicSlug)
     {
-        $notes = NotesAlevel::where('slug',$topicSlug)->first() ?? abort(404);
+        $notes = NotesAlevel::where('slug',$topicSlug)->where('status',1)->first() ?? abort(404);
         
         return view('client.notes_single',compact('notes'));
     }
 
     public function showNotesAtWelcome($subject)
     {
-        $subjects = NotesAlevel::where('subject',$subject)->get();
+        $subjects = NotesAlevel::where('subject',$subject)->where('status',1)->get();
         if($subjects->isEmpty()){
            if ($subject == "Mathematics" || 
                 $subject == "Physics" ||

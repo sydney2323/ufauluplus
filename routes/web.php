@@ -19,6 +19,7 @@ use App\Http\Controllers\AdminAlevelQuestionsBankController;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminEventsAndNewsController;
+use App\Http\Controllers\AdminDashboardDataController;
 use App\Http\Controllers\WelcomeController;
 
 /*
@@ -95,7 +96,7 @@ Route::post('/login-user',[UserAuthController::class,'loginUser'])->name('login-
 Route::get('/admin/logout',[UserAuthController::class,'logoutAdmin']);
 
 //Admin Dashboard
-Route::get('/admin/fetch-dashboard-data',[AdminUserFeedbackController::class,'fetchDashboardData'])->middleware('adminIsLoggedIn');
+Route::get('/admin/fetch-dashboard-data',[AdminDashboardDataController::class,'fetchDashboardData'])->middleware('adminIsLoggedIn');
 
 //admin Events and News
 Route::resource('admin/eventsAndNews', AdminEventsAndNewsController::class)->middleware('adminIsLoggedIn');

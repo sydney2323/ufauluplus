@@ -14,8 +14,8 @@
 
           <div class="info-box-content">
             <span class="info-box-text">Total Quiz</span>
-            <span class="info-box-number">
-              10
+            <span id="quizOlevel" class="info-box-number">
+              
             </span>
           </div>
           <!-- /.info-box-content -->
@@ -34,7 +34,8 @@
 
           <div class="info-box-content">
             <span class="info-box-text">Total Notes</span>
-            <span class="info-box-number">6</span>
+            <span  id="NotesOlevel" class="info-box-number">
+            </span>
           </div>
           <!-- /.info-box-content -->
         </div>
@@ -47,7 +48,8 @@
 
           <div class="info-box-content">
             <span class="info-box-text">Registered Users</span>
-            <span class="info-box-number">2</span>
+            <span id="User_O" class="info-box-number">
+            </span>
           </div>
           <!-- /.info-box-content -->
         </div>
@@ -65,8 +67,7 @@
 
           <div class="info-box-content">
             <span class="info-box-text">Total Quiz</span>
-            <span class="info-box-number">
-              10
+            <span id="quizAlevel" class="info-box-number">
             </span>
           </div>
           <!-- /.info-box-content -->
@@ -85,7 +86,8 @@
 
           <div class="info-box-content">
             <span class="info-box-text">Total Notes</span>
-            <span class="info-box-number">6</span>
+            <span id="NotesAlevel" class="info-box-number">
+            </span>
           </div>
           <!-- /.info-box-content -->
         </div>
@@ -98,7 +100,8 @@
 
           <div class="info-box-content">
             <span class="info-box-text">Registered Users</span>
-            <span class="info-box-number">2</span>
+            <span id="User_A" class="info-box-number">
+            </span>
           </div>
           <!-- /.info-box-content -->
         </div>
@@ -112,29 +115,28 @@
 @section('scripts')
 
 <script>
-  $(document).ready(function(){ 
-    fetch_dashboard_data();
-        function fetch_dashboard_data(){
+   $(document).ready(function(){ 
+    fetchDashboardData();
+        function fetchDashboardData(){
           $.ajax({
             url:'/admin/fetch-dashboard-data',
             type : 'GET',
             dataType : 'json',
             success:function(res)
             {
-              console.log(res);
-              $('#feedback_count').html(res.count);
-              $('#feedback_count2').html(res.count);
-              $.each(res.data, function(key, value){
-                $('#feedback_area').append(' <div class="dropdown-divider"></div>\
-                                          <a href="/admin/fetch-user-feedback-all" class="dropdown-item">\
-                                          <i class="fas fa-envelope mr-2"></i>'+value.name+'\
-                                          <span class="float-right text-muted text-sm">3 mins</span>\
-                                        </a>');
-                }); 
+             //console.log(res);
+              $('#quizOlevel').html(res.quizOlevel);
+              $('#quizAlevel').html(res.quizAlevel);
+              $('#NotesOlevel').html(res.NotesOlevel);
+              $('#NotesAlevel').html(res.NotesAlevel);
+              $('#User_O').html(res.User_O);
+              $('#User_A').html(res.User_A);
              }
           })
       }
     });
+
+
 </script>
 
 @endsection

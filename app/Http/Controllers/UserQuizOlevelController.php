@@ -21,7 +21,7 @@ class UserQuizOlevelController extends Controller
 
     public function show($subject)
     {
-        $quizOlevels = QuizOlevel::where('subject',$subject)->paginate(5);
+        $quizOlevels = QuizOlevel::where('subject',$subject)->where('active',true)->paginate(5);
         return view('client.show',compact('quizOlevels','subject'));   
 
     }

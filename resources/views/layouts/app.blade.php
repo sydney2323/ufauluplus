@@ -73,7 +73,7 @@ https://templatemo.com/tm-569-edu-meeting
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                      <div class="">
-                      <img class="logo img" src="{{ asset('assets/images/j2.png') }}" alt="">
+                      <img class="logo img" src="{{ asset('assets/images/j3.png') }}" alt="">
                      </div>
                     
                     <!-- ***** Logo End ***** -->
